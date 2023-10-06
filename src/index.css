@@ -1,0 +1,87 @@
+body,
+html,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background: #efefef;
+}
+
+.modal-overlay {
+  /* bring on top of other content */
+  z-index: 1;
+
+  /* starting from the top corner */
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  /* fill the screen */
+  width: 100vw;
+  height: 100vh;
+
+  /* Boiler plate */
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.modal {
+  /* bring on top of overlay */
+  z-index: 2;
+
+  /* move halfway across screen */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  /* move half the lenght of this div backwards */
+  transform: translate(-50%,-50%);
+
+  /* Boiler plate */
+  width: 300px;
+  height: 300px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 3px 6px -4px #0000001f, 0 6px 16px #00000014,
+    0 9px 28px 8px #0000000d;
+}
+
+.grid {
+  display: grid;
+  /* maintains 3 columns, more data gets new row */
+  grid-template-columns: auto auto auto;
+  gap: 24px 24px;
+  padding: 24px;
+}
+
+.grid-item {
+  padding: 24px;
+  background: white;
+  border-radius: 4px;
+}
+
+[id^="search"] {
+  padding: 0.5rem;
+}
+
+#searchbar {
+  background: #cacaca;
+}
+
+#searchbar > * {
+  margin: 0.5rem;
+}
+
+#searchtext {
+  width: 25rem;
+}
+
+#searchbtn {
+  width: 5rem;
+}
